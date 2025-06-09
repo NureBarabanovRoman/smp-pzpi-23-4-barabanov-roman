@@ -13,12 +13,6 @@ $products = [
 $cart = [];
 $userProfile = ["name" => null, "age" => null];
 
-function printName() {
-    echo "\n################################\n";
-    echo "# ПРОДОВОЛЬЧИЙ МАГАЗИН \"ВЕСНА\" #\n";
-    echo "################################\n";
-}
-
 function printMainMenu() {
     echo "1 Вибрати товари\n";
     echo "2 Отримати підсумковий рахунок\n";
@@ -154,7 +148,9 @@ $stdin = fopen("php://stdin", "r");
 
 function main() {
     while (true) {
-        printName();
+        echo "\n################################\n";
+        echo "# ПРОДОВОЛЬЧИЙ МАГАЗИН \"ВЕСНА\" #\n";
+        echo "################################\n";
         printMainMenu();
         $cmd = inputCommand();
         if ($cmd === 1) {
